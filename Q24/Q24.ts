@@ -26,9 +26,9 @@ console.log("Is fruit == 'orange'? I predict False.", fruit == 'orange');
 console.log("Is fruit != 'apple'? I predict False.", fruit != 'apple');
 
 // Tests using the lower case function
-let name: string = 'John';
-console.log("Is name.toLowerCase() == 'john'? I predict True.", name.toLowerCase() == 'john');
-console.log("Is name.toLowerCase() == 'jane'? I predict False.", name.toLowerCase() == 'jane');
+let name2: string = 'John';
+console.log("Is name.toLowerCase() == 'john'? I predict True.", name2.toLowerCase() == 'john');
+console.log("Is name.toLowerCase() == 'jane'? I predict False.", name2.toLowerCase() == 'jane');
 
 // Numerical tests
 let num: number = 10;
