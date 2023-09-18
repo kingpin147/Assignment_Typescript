@@ -1,2 +1,2 @@
 # Assignment_Typescript
- 
+All 45 TYPESCRIPT QUESTIONS SOLUTION
