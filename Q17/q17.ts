@@ -14,28 +14,26 @@
 // Original guest list
 const guestList: string[] = ["Akram", "Aslam", "Akbar", "Azhar", "Bilal", "Zafar", "Sana"];
 
-// Print the guest who can't make it
-const guestWhoCantMakeIt: string = guestList[1]; // Assuming the second person can't make it
-console.log(`${guestWhoCantMakeIt} can't make it to the dinner.`);
+// Print a message saying you can only invite two people
+console.log("Due to limited space, you can invite only two people for dinner.");
 
-// Replace the guest who can't make it with a new person
-const newGuest: string = "John";
-guestList[1] = newGuest;
+// Loop through the guest list and remove excess guests
+for (let i = 0; i < guestList.length; i++) {
+  if (i >= 2) {
+    const removedGuest = guestList.pop(); // Remove the last person from the list
+    console.log(`Sorry, ${removedGuest}! You can't be invited to dinner.`);
+  }
+}
 
-// Print a second set of invitation messages for the updated guest list
+// Print invitation messages to the remaining guests
 for (let i = 0; i < guestList.length; i++) {
   console.log(`Dear ${guestList[i]}, you are cordially invited to dinner. We would be honored to have your presence.`);
 }
 
-// Inform about the bigger dinner table
-console.log("Good news! We found a bigger dinner table.");
+// Remove the last two names from the list to make it empty
+guestList.pop();
+guestList.pop();
 
-// Add new guests using push() and splice()
-guestList.push("Emma"); // Add at the end using push()
-guestList.splice(guestList.length / 2, 0, "William"); // Add in the middle using splice()
-guestList.push("Sophia"); // Add at the end using push()
+// Print to confirm that the list is empty
+console.log("The guest list is now empty:", guestList);
 
-// Print new invitation messages for the updated guest list
-for (let i = 0; i < guestList.length; i++) {
-  console.log(`Dear ${guestList[i]}, you are cordially invited to dinner. We would be honored to have your presence.`);
-}
